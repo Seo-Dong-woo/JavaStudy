@@ -10,6 +10,15 @@ public class 문제_6 {
 		{
 			arr[i]=scan.nextInt();
 		}
+		int max=0;
+		for(int i=0;i<arr.length;i++)
+		{
+			if(max<arr[i])
+			{
+				max=arr[i];
+			}
+		}
+		System.out.println("최댓값: " + max);
 		
 	}
 

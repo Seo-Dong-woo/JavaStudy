@@ -15,6 +15,7 @@ public class 문제_11 {
 		{
 			if(i%3==0)
 				System.out.print(i + " ");
-	}
+		}	
 
+	}
 }

@@ -1,4 +1,4 @@
-class Movie
+class 영화
 {
 	int movie_no;
 	String poster;

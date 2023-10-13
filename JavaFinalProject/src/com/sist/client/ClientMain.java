@@ -3,7 +3,7 @@ package com.sist.client;
 import javax.swing.*;
 
 public class ClientMain {
-	private JFrame fr=new JFrame();
+	private JFrame fr=new JFrame("네트워크 미니 프로젝트");
 	/*private JButton b1=new JButton("홍");
 	private JButton b2=new JButton("맛집");
 	private JButton b3=new JButton("레시피");
@@ -46,7 +46,7 @@ public class ClientMain {
 		// TODO Auto-generated method stub
 		try
 		{
-			UIManager.setLookAndFeel("com.jtattoo.plaf.aluminium.AluminiumLookAndFeel");
+			UIManager.setLookAndFeel("com.jtattoo.plaf.mcwin.McWinLookAndFeel");
 		}catch(Exception ex) {}
 		new ClientMain();
 	}

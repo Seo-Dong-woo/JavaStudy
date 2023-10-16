@@ -49,7 +49,7 @@ class Sub extends Super
  *                                System...
  *                                java.lnag => 217page
  */
-public class MainClass extends String{
+public class MainClass{
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

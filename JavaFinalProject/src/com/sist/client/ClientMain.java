@@ -26,7 +26,6 @@ import java.awt.event.*;
  *       = JTable: 목록출력,(JList)
  *       = JTabbedPane, JEditPane, JTextPane
  */
-
 public class ClientMain implements ActionListener{
 	// 생성자 => 오버로딩
 	private JFrame fr=new JFrame("네트워크 미니 프로젝트");

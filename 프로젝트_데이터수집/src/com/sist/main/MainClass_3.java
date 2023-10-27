@@ -62,10 +62,10 @@ public class MainClass_3 {
                     </dl>
 				 */
 				Element dd1=doc2.select("div.detail_cont dl.list_cont dd").get(0);
-				Element dd2=doc2.select("div.detail_cont dl.list_cont dd").get(0);
-				Element dd3=doc2.select("div.detail_cont dl.list_cont dd").get(0);
-				Element dd4=doc2.select("div.detail_cont dl.list_cont dd").get(0);
-				Element dd5=doc2.select("div.detail_cont dl.list_cont dd").get(0);
+				Element dd2=doc2.select("div.detail_cont dl.list_cont dd").get(1);
+				Element dd3=doc2.select("div.detail_cont dl.list_cont dd").get(2);
+				Element dd4=doc2.select("div.detail_cont dl.list_cont dd").get(3);
+				Element dd5=doc2.select("div.detail_cont dl.list_cont dd").get(4);
 				//Elements detail=doc2.select("div.detail_cont dl.list_cont dd");
 				//System.out.println(detail);
 				//String temp="";
@@ -74,8 +74,13 @@ public class MainClass_3 {
 					temp+=detail.get(j).text() + "|";
 					System.out.println(detail.get(j).text());
 				}*/
+				System.out.println(dd1.text());
+				System.out.println(dd2.text());
+				System.out.println(dd3.text());
+				System.out.println(dd4.text());
+				System.out.println(dd5.text());
 				
-				Element poster=doc2.selectFirst("div.thumb_img span.bg_img");
+				Element poster=doc2.selectFirst("div.info_poster span.bg_img");
 				String image=poster.attr("style");
 				/*image=image.substring(image.indexOf("(")+1, image.lastIndexOf(")"));
 				System.out.println(image);*/

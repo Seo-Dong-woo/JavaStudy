@@ -66,7 +66,7 @@ public class MainClass_4 {
 							+publ.text()+"|"
 							+score.text()+"|"
 							+price.text()+"|"
-							+poster.text()+"\r\n";
+							+image +"\r\n";
 				msg=msg.substring(0,msg.lastIndexOf("|"));
 				msg+="\r\n";
 				

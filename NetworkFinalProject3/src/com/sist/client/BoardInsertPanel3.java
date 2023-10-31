@@ -143,10 +143,3 @@ public class BoardInsertPanel3 extends JPanel implements ActionListener{
 
 
 
-
-
-
-
-
-
-

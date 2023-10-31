@@ -114,4 +114,3 @@ public class BoardDetailPanel3 extends JPanel implements ActionListener{
 		}
 	}
 }
-

@@ -70,13 +70,20 @@ public class BoardInsertPanel3 extends JPanel implements ActionListener{
 		tf3.setBounds(85, 715, 150, 30);
 		add(la4); add(tf3);
 		
-		JPanel p=new JPanel();
+		/*JPanel p=new JPanel();
 		p.add(b1); p.add(b2);
 		p.setBounds(10, 725, 625, 35);
-		add(p);
+		add(p);*/
+		
+		b1.setBounds(875, 715, 65, 25);
+		add(b1);
+		b2.setBounds(875, 75, 65, 25);
+		add(b2);
 		
 		b1.addActionListener(this);
 		b2.addActionListener(this);
+		
+
 	}
 
 	@Override

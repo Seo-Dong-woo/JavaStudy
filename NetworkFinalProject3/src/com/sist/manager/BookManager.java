@@ -35,7 +35,7 @@ public class BookManager {
    // 자동 수행이 된다 , 상속은 안된다 
    static
    {
-	   /*FileReader fr=null;
+	   FileReader fr=null;
 	   ObjectOutputStream ois=null;
 	   FileOutputStream fis=null;
 	   try
@@ -80,7 +80,7 @@ public class BookManager {
 			   fis.close();
 			   ois.close();
 		   }catch(Exception ex) {}
-	   }*/
+	   }
 	   
 	   /*FileInputStream fis=null;
 	   ObjectInputStream ois=null;
@@ -100,9 +100,9 @@ public class BookManager {
 			   fis.close();
 			   ois.close();
 		   }catch(Exception ex) {}
-	   }
-   }*/
-   /*public static void main(String[] args) {
+	   }*/
+   }
+   public static void main(String[] args) {
 	   BookManager fm=new BookManager();
 	   //System.out.println("저장 완료!!");
 	   for(BookCategoryVO vo:cList)
@@ -113,8 +113,8 @@ public class BookManager {
 		   System.out.println(vo.getPoster());
 		   System.out.println("==============================");
 	   }
-   }*/
-   public ArrayList<BookCategoryVO> foodCategoryData(int no)
+   }
+   public ArrayList<BookCategoryVO> bookCategoryData(int no)
    {
 	   ArrayList<BookCategoryVO> list=
 			   new ArrayList<BookCategoryVO>();

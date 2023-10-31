@@ -32,15 +32,15 @@ public class MainClass_4 {
 					System.out.println(title.text());
 					
 					//작가
-					Element author=doc2.selectFirst("span.gd_pubArea span.gd_auth");
-					System.out.println(author.text());
+					Element author=doc2.selectFirst("span.gd_pubArea span.gd_auth a");
+					System.out.println(author.attr("href"));
 					
 					//출판사
 					Element publ=doc2.selectFirst("span.gd_pub");
 					System.out.println(publ.text());
 					
 					//평점
-					Element score=doc2.selectFirst("span.gd_rating");
+					Element score=doc2.selectFirst("span.gd_ratingArea em.yes_b");
 					System.out.println(score.text());
 					
 					//가격

@@ -13,7 +13,7 @@ public class FoodHouseVO {
 	private String type;
 	private String price;
 	private String parking;
-	private String tiem;
+	private String item;
 	private String menu;
 	private String poster;
 	
@@ -71,11 +71,11 @@ public class FoodHouseVO {
 	public void setParking(String parking) {
 		this.parking = parking;
 	}
-	public String getTiem() {
-		return tiem;
+	public String getItem() {
+		return item;
 	}
-	public void setTiem(String tiem) {
-		this.tiem = tiem;
+	public void setItem(String item) {
+		this.item = item;
 	}
 	public String getMenu() {
 		return menu;

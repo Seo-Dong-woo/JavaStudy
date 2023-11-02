@@ -6,8 +6,8 @@ import java.awt.*;
 public class ChatPanel3 extends JPanel{
 	JTable table1,table2;
 	DefaultTableModel model1,model2;
-	JTextArea pane;   //채팅출력위치
-	JTextField tf;
+	JTextArea pane; // 채팅출력위치
+	JTextField tf; // 텍스트 입력란
 	JButton b1,b2,b3,b4,b5,b6;
 	JScrollBar bar;
 	public ChatPanel3()

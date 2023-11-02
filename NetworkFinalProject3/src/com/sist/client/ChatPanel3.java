@@ -2,12 +2,14 @@ package com.sist.client;
 import javax.swing.*;
 import javax.swing.table.*;
 import java.awt.*;
+
 public class ChatPanel3 extends JPanel{
 	JTable table1,table2;
 	DefaultTableModel model1,model2;
-	JTextPane pane;   //채팅출력위치
+	JTextArea pane;   //채팅출력위치
 	JTextField tf;
 	JButton b1,b2,b3,b4,b5,b6;
+	JScrollBar bar;
 	public ChatPanel3()
 	{                         //공개,비공개
 //		                        ---
@@ -32,11 +34,12 @@ public class ChatPanel3 extends JPanel{
 		js2.setBounds(10, 425, 500, 300);
 		add(js2);
 		
-		pane=new JTextPane();
+		pane=new JTextArea();
 		JScrollPane js3=new JScrollPane(pane);
 		pane.setEditable(false);   //채팅 안칠때 비활성화		
 		js3.setBounds(520, 15, 490, 360);
 		add(js3);
+		bar=js3.getVerticalScrollBar();
 		
 		tf=new JTextField();
 		tf.setBounds(520, 380, 490, 35);

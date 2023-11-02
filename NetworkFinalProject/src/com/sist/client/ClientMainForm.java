@@ -180,7 +180,7 @@ public class ClientMainForm extends JFrame implements ActionListener, Runnable{
 	{
 		try
 		{
-			s=new Socket("192.168.0.101", 3355); // 서버 연결
+			s=new Socket("192.168.0.116", 10000); // 서버 연결
 			out=s.getOutputStream(); // 서버 전송
 			in=new BufferedReader(new InputStreamReader(s.getInputStream()));
 			

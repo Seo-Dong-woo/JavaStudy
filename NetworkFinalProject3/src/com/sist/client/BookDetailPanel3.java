@@ -34,30 +34,34 @@ public class BookDetailPanel3 extends JPanel implements ActionListener{
 		
 		//배치
 		setLayout(null);
-		posterLa.setBounds(10, 15, 300, 375);
+		posterLa.setBounds(60, 65, 400, 500); // 포스터 크기 메인 비율
 		add(posterLa);
 		
-		nameLa.setBounds(320, 15, 300, 35);
-		//nameLa.setFont(new Font("맑은 고딕",Font.BOLD,30));
+		nameLa.setFont(new Font("맑은 고딕",Font.PLAIN,20));
+		nameLa.setBounds(390, 60, 300, 35);
 		add(nameLa); add(scoreLa);
 		
-		la1.setBounds(320, 60, 70, 35);
-		authorLa.setBounds(395, 60, 400, 35);
+		la1.setFont(new Font("맑은 고딕",Font.PLAIN,20));
+		la1.setBounds(390, 100, 70, 35);
+		authorLa.setBounds(485, 100, 400, 35);
 		add(la1); add(authorLa);
 		
-		la2.setBounds(320, 100, 70, 35);
-		publLa.setBounds(395, 100, 400, 35);
+		la2.setFont(new Font("맑은 고딕",Font.PLAIN,20));
+		la2.setBounds(390, 140, 70, 35);
+		publLa.setBounds(480, 140, 400, 35);
 		add(la2); add(publLa);
 		
-		la3.setBounds(320, 140, 70, 35);
-		scoreLa.setBounds(395, 140, 400, 35);
+		la3.setFont(new Font("맑은 고딕",Font.PLAIN,20));
+		la3.setBounds(390, 180, 70, 35);
+		scoreLa.setBounds(480, 180, 400, 35);
 		add(la3); add(scoreLa);
 		
-		la4.setBounds(320, 180, 70, 35);
-		priceLa.setBounds(395, 180, 400, 35);
+		la4.setFont(new Font("맑은 고딕",Font.PLAIN,20));
+		la4.setBounds(390, 220, 70, 35);
+		priceLa.setBounds(480, 220, 400, 35);
 		add(la4); add(priceLa);
 		
-		b.setBounds(320, 340, 100, 35);
+		b.setBounds(370, 650, 100, 35);
 		add(b);
 		
 		b.addActionListener(this);
@@ -79,7 +83,7 @@ public class BookDetailPanel3 extends JPanel implements ActionListener{
 			priceLa.setText(vo.getPrice());
 			
 			URL url=new URL(vo.getPoster());
-			Image image=ImageChange3.getImage3(new ImageIcon(url), 300, 500);
+			Image image=ImageChange3.getImage3(new ImageIcon(url), 300, 500); // 포스터 크기
 			posterLa.setIcon(new ImageIcon(image));
 		}catch(Exception ex) {}
 	}

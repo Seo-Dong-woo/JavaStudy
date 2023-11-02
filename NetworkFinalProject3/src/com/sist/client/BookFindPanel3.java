@@ -43,7 +43,7 @@ public class BookFindPanel3 extends JPanel implements ActionListener{
 			//Class.forName("")
 		};
 		table=new JTable(model);
-		table.setRowHeight(100);
+		table.setRowHeight(250); // 검색 내용 한 줄 크기
 		JScrollPane js=new JScrollPane(table);
 		
 		//배치
@@ -72,7 +72,7 @@ public class BookFindPanel3 extends JPanel implements ActionListener{
 			for(BookHouseVO3 vo:list)
 			{
 				URL url=new URL(vo.getPoster());
-				Image image=ImageChange3.getImage3(new ImageIcon(url), 90, 90);
+				Image image=ImageChange3.getImage3(new ImageIcon(url), 120, 180); // 이미지 크기
 				Object[] obj= { new ImageIcon(image)
 								,vo.getName()
 								,vo.getPubl()

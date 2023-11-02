@@ -34,7 +34,7 @@ public class ClientMainForm3 extends JFrame implements ActionListener, Runnable 
 		mp.setBounds(10, 200, 200, 500);   //메뉴의 버튼 크기
 		add(mp);
 		
-		cp.setBounds(230, 15, 1030, 800);
+		cp.setBounds(230, 15, 1030, 750); // ******************* 메인의 크기 중요 *********************
 		add(cp);
 		setSize(1280,800);
 		//setVisible(true);

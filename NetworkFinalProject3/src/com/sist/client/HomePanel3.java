@@ -142,7 +142,7 @@ public class HomePanel3 extends JPanel implements ActionListener, MouseListener{
 //	   b3.setPreferredSize(new Dimension(300,45));
 //	   p.add(b1);p.add(b2);p.add(b3);
 	   
-	   pan.setLayout(new GridLayout(4,3,5,5));
+	   pan.setLayout(new GridLayout(3,4,6,8)); // 홈에 몇행 몇열로 포스터을 출력할 지
 	   //pan.setBackground(Color.black);
 	   // 배치 
 	   setLayout(new BorderLayout());

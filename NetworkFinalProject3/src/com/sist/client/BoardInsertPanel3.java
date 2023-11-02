@@ -15,26 +15,25 @@ import com.sist.vo.BoardVO3;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.util.*;
+import java.util.Date;
 
 public class BoardInsertPanel3 extends JPanel implements ActionListener{
-	
+
 	ControllPanel3 cp;
 	JLabel la;
-	JLabel la1, la2, la3, la4;
-	JTextField tf1, tf2, tf3;
+	JLabel la1,la2,la3,la4;
+	JTextField tf1,tf2,tf3;
 	JTextArea ta;
-	JButton b1, b2;
+	JButton b1,b2;
 	
 	public BoardInsertPanel3(ControllPanel3 cp)
 	{
 		this.cp=cp;
-		// setBackground(Color.darkGray);
 		la=new JLabel("자유게시판");
-		setLayout(null);
+		setLayout(null);   //사용자 정의 배치
 		la.setHorizontalAlignment(JLabel.CENTER);
-		la.setFont(new Font("맑은 고딕", Font.BOLD, 35));
-		la.setBounds(100, 15, 700, 50);
+		la.setFont(new Font("맑은 고딕",Font.BOLD,35));
+		la.setBounds(100,15,700,50);
 		add(la);
 		
 		la1=new JLabel("이름");
@@ -52,8 +51,7 @@ public class BoardInsertPanel3 extends JPanel implements ActionListener{
 		b1=new JButton("글쓰기");
 		b2=new JButton("취소");
 		
-		
-		// 배치
+		//배치
 		la1.setBounds(10, 75, 70, 30);
 		tf1.setBounds(85, 75, 150, 30);
 		add(la1); add(tf1);
@@ -63,29 +61,27 @@ public class BoardInsertPanel3 extends JPanel implements ActionListener{
 		add(la2); add(tf2);
 		
 		la3.setBounds(10, 155, 70, 30);
-		js.setBounds(85, 155, 850, 550);
+		js.setBounds(85, 155, 850, 450);
 		add(la3); add(js);
 		
-		la4.setBounds(10, 715, 70, 30);
-		tf3.setBounds(85, 715, 150, 30);
+		la4.setBounds(10, 615, 70, 30);
+		tf3.setBounds(85, 615, 150, 30);
 		add(la4); add(tf3);
 		
-		/*JPanel p=new JPanel();
-		p.add(b1); p.add(b2);
-		p.setBounds(10, 725, 625, 35);
-		add(p);*/
+//		JPanel p=new JPanel();
+//		p.add(b1); p.add(b2);
+//		p.setBounds(10, 725, 625, 35);
+//		add(p);
 		
-		b1.setBounds(875, 715, 65, 25);
+		b1.setBounds(875, 615, 65, 25);
 		add(b1);
 		b2.setBounds(875, 75, 65, 25);
 		add(b2);
 		
+		
 		b1.addActionListener(this);
 		b2.addActionListener(this);
-		
-
 	}
-
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
@@ -102,27 +98,26 @@ public class BoardInsertPanel3 extends JPanel implements ActionListener{
 				return;
 			}
 			
-			String subject=tf2.getText();
-			if(name.trim().length()<1)
+			String subject=tf1.getText();
+			if(subject.trim().length()<1)
 			{
 				tf2.requestFocus();
 				return;
 			}
 			
 			String content=ta.getText();
-			if(name.trim().length()<1)
+			if(content.trim().length()<1)
 			{
 				ta.requestFocus();
 				return;
 			}
 			
 			String pwd=tf3.getText();
-			if(name.trim().length()<1)
+			if(pwd.trim().length()<1)
 			{
 				tf3.requestFocus();
 				return;
 			}
-			
 			BoardManager3 bm=new BoardManager3();
 			BoardVO3 vo=new BoardVO3();
 			vo.setNo(bm.boardSequence());
@@ -134,12 +129,9 @@ public class BoardInsertPanel3 extends JPanel implements ActionListener{
 			vo.setRegdate(new Date());
 			bm.boardInsert(vo);
 			
-			// 화면이동
+			//화면이동
 			cp.card.show(cp, "board");
 			cp.blp.boardList();
 		}
 	}
 }
-
-
-

@@ -1,4 +1,4 @@
-package com.sist.main;
+package com.sist.io;
 
 import java.io.FileWriter;
 
@@ -7,7 +7,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-public class MainClass_4 {
+public class MainClass3 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -24,7 +24,7 @@ public class MainClass_4 {
 				{
 					try
 					{
-						String image=poster.get(j).attr("data-original");
+						
 						String subLink="https://www.yes24.com/"+link.get(j).attr("href");
 						System.out.println(subLink);
 						
@@ -43,21 +43,23 @@ public class MainClass_4 {
 						System.out.println(publ.text());
 					
 						//평점
-						Element score=doc2.selectFirst("span.gd_ratingArea em.yes_b");
+						Element score=doc2.selectFirst("span.gd_rating em.yes_b");
 						System.out.println(score.text());
 					
 						//가격
-						//Element price=doc2.selectFirst("tr.accentRow");
-						//System.out.println(price.text());
+						Element price=doc2.selectFirst("tr.accentRow");
+						System.out.println(price.text());
 					
 						//이미지
+						String image=poster.get(j).attr("data-original");
 						
 						String msg=k+"|"
 								+title.text()+"|"
 								+author.text()+"|"
 								+image + "|"
 								+publ.text()+"|"
-								+score.text()+ "\r\n";
+								+score.text()+ "|" 
+								+price.text()+ "|" + "\r\n";
 						msg=msg.substring(0,msg.lastIndexOf("|"));
 						msg+="\r\n";
 				
@@ -73,4 +75,3 @@ public class MainClass_4 {
 
 	}
 }
-
